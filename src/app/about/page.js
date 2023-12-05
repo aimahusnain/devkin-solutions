@@ -1,5 +1,5 @@
-import AboutCoverSection from "@/src/components/About/AboutCoverSection";
-import Skills from "@/src/components/About/Skills";
+import AboutCoverSection from "@/src/components/(blog)/About/AboutCoverSection";
+import Skills from "@/src/components/(blog)/About/Skills";
 import Link from "next/link";
 
 

@@ -9,6 +9,8 @@ import {
   SunIcon,
   TwitterIcon,
 } from "../Icons";
+import { useContext } from "react";
+import { AlexioContext } from "../../../Context";
 import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import { useState } from "react";
@@ -16,18 +18,20 @@ import { cx } from "@/src/utils";
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
+  const { changeNav, toggle, nav } = useContext(AlexioContext);
   const [click, setClick] = useState(false);
 
-  const toggle = () => {
+  const toggle2 = () => {
     setClick(!click);
   };
+
   return (
     <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between">
       <Logo />
 
       <button
         className="inline-block sm:hidden z-50"
-        onClick={toggle}
+        onClick={toggle2}
         aria-label="Hamburger Menu"
       >
         <div className="w-6 cursor-pointer transition-all ease duration-300">
@@ -96,9 +100,46 @@ const Header = () => {
         className=" w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize items-center hidden sm:flex
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50"
       >
-        <Link href="/" className="mr-2">
+        <Link
+          href="/"
+          className="mr-2"
+          onClick={() => changeNav("home", false)}
+        >
           Home
         </Link>
+
+        <Link
+          href="/"
+          className="mr-2"
+          onClick={() => changeNav("about", false)}
+        >
+          About Us
+        </Link>
+
+        <Link
+          href="/"
+          className="mr-2"
+          onClick={() => changeNav("resume", false)}
+        >
+          Resume
+        </Link>
+
+        <Link
+          href="/"
+          className="mr-2"
+          onClick={() => changeNav("portfolio", false)}
+        >
+          Portfolio
+        </Link>
+
+        <Link
+          href="/"
+          className="mr-2"
+          onClick={() => changeNav("contact", false)}
+        >
+          Contact Me
+        </Link>
+
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={cx(

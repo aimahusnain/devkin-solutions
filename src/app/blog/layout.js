@@ -1,8 +1,8 @@
-import Header from "@/src/components/Header";
+import Header from "@/src/components/(blog)/Header";
 import { cx } from "@/src/utils";
 import { Inter, Manrope } from "next/font/google";
-import Footer from "../../components/Footer";
-import ThemeScript from "../../components/ThemeScript";
+import Footer from "../../components/(blog)/Footer";
+import ThemeScript from "../../components/(blog)/ThemeScript";
 import siteMetadata from "../../utils/siteMetaData";
 import "../globals.css";
 

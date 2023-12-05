@@ -1,7 +1,9 @@
-import { cx } from "@/src/utils";
+import { cx } from "../utils";
 import { Inter, Manrope } from "next/font/google";
 import siteMetadata from "../utils/siteMetaData";
 import "./globals.css";
+import AlexioHead from "../AlexioHead";
+import AlexioState from "../Context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,15 +55,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <AlexioState>
+      <AlexioHead />
         <body
           className={cx(
             inter.variable,
             manrope.variable,
             "font-mr bg-light dark:bg-dark"
           )}
-        >
+          >
           {children}
         </body>
+          </AlexioState>
     </html>
   );
 }

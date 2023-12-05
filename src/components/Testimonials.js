@@ -17,7 +17,7 @@ const Testimonials = () => {
           </div>
           <div className="user">
             <div className="img">
-              <Image width={500} height={500} src="static/img/avtar1.jpg" alt title />
+              <img src="static/img/avtar1.jpg" alt title />
             </div>
             <div className="name ml-2">
               <span>Jennifer Lutheran</span>
@@ -35,7 +35,7 @@ const Testimonials = () => {
           </div>
           <div className="user">
             <div className="img">
-              <Image width={500} height={500} src="static/img/avtar1.jpg" alt title />
+              <img src="static/img/avtar1.jpg" alt title />
             </div>
             <div className="name ml-2">
               <span>Salma Hayek</span>
@@ -53,7 +53,7 @@ const Testimonials = () => {
           </div>
           <div className="user">
             <div className="img">
-              <Image width={500} height={500} src="static/img/avtar1.jpg" alt title />
+              <img src="static/img/avtar1.jpg" alt title />
             </div>
             <div className="name ml-2">
               <span>Martin Lutheran</span>

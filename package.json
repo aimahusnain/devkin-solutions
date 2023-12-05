@@ -43,6 +43,7 @@
     "typeit-react": "^2.7.0"
   },
   "devDependencies": {
+    "@types/react": "18.2.42",
     "encoding": "^0.1.13"
   }
 }

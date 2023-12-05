@@ -1,13 +1,12 @@
+import ContactForm from "@/src/components/(blog)/Contact/ContactForm";
 import dynamic from 'next/dynamic';
-import ContactForm from "@/src/components/Contact/ContactForm";
-import siteMetadata from "@/src/utils/siteMetaData";
 
 export const metadata = {
   title: "Contact Me",
   description: `Contact me through the form available on this page or email me at email`,
 };
 
-const DynamicLottieAnimation = dynamic(() => import('@/src/components/Contact/LottieAnimation'), {
+const DynamicLottieAnimation = dynamic(() => import('@/src/components/(blog)/Contact/LottieAnimation'), {
   ssr: false, // Set ssr to false to prevent server-side rendering
 });
 

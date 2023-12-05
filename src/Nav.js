@@ -1,9 +1,12 @@
+'use client'
+
 import { useContext, useEffect, useState } from "react";
 import { AlexioContext } from "./Context";
 
 const Nav = () => {
   const { changeNav, toggle, nav } = useContext(AlexioContext);
   const [activeIndex, setActiveIndex] = useState(0);
+  
   useEffect(() => {
     const pages = document.querySelectorAll(".page");
     pages.forEach((page, index) => {
@@ -64,6 +67,7 @@ const Nav = () => {
           About Us
         </a>
       </div>
+
       <div className="pages-nav__item">
         <a
           className="link link--page"
@@ -72,6 +76,16 @@ const Nav = () => {
           Resume
         </a>
       </div>
+
+      <div className="pages-nav__item">
+        <a
+          className="link link--page"
+          href="blog"
+        >
+          Blog
+        </a>
+      </div>
+      
       <div className="pages-nav__item">
         <a
           className="link link--page"
